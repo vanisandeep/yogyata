@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Jquerypopup : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            BindGrid();
+        }
+    }
+
+    void BindGrid()
+    {
+        Ropautil obj = new Ropautil();
+        grdupcomng.DataSource = obj.Getallrecords();
+        grdupcomng.DataBind();
+    }
+
+
+    protected void grdupcomng_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+        if (e.CommandName == "ShowPopup")
+        {
+            LinkButton btndetails = (LinkButton)e.CommandSource;
+            GridViewRow gvrow = (GridViewRow)btndetails.NamingContainer;
+            lblID.Text = grdupcomng.DataKeys[gvrow.RowIndex].Value.ToString();
+            txtAddress.Text = HttpUtility.HtmlDecode(gvrow.Cells[1].Text);
+              Popup(true);            
+        }
+    }
+
+    protected void btnUpdate_Click(object sender, EventArgs e)
+    {
+
+        BindGrid();
+
+        
+            if(txtAddress.Text!=null)
+            {
+                int number = Convert.ToInt32(lblID.Text);
+               
+         
+                using (ROPAMODEL obj = new ROPAMODEL())
+                {
+                    var query = (from a in obj.UpcommingSurveyors where a.SurAppID==number select a).FirstOrDefault();
+                    if (query != null)
+                    {
+                        query.EmailID = txtAddress.Text.Trim();
+                        obj.SaveChanges();
+                    }
+                }           
+                BindGrid(); 
+                Popup(false);
+            }
+        }
+        //To show message after performing operations
+        void Popup(bool isDisplay)
+        {
+            StringBuilder builder = new StringBuilder();
+            if (isDisplay)
+            {
+                builder.Append("<script language=JavaScript> ShowPopup(); </script>\n");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "ShowPopup", builder.ToString());
+            }
+            else
+            {
+                builder.Append("<script language=JavaScript> HidePopup(); </script>\n");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "HidePopup", builder.ToString());
+            }
+     
+    }
+}

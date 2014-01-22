@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>CSharpSyntax</id>
+    <version>0.2.0.0</version>
+    <title>CSharpSyntax</title>
+    <authors>Pieter van Ginkel</authors>
+    <owners>Pieter van Ginkel</owners>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl-3.0.txt</licenseUrl>
+    <projectUrl>http://github.com/pvginkel/CSharpSyntax</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>C# code generator based on the Roslyn API.</description>
+    <releaseNotes />
+    <copyright>Pieter van Ginkel © 2013</copyright>
+    <language />
+    <tags>code-generator c# roslyn</tags>
+  </metadata>
+</package>

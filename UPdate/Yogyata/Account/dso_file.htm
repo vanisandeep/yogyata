@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>DSO Explanation</title>
+<style type="text/css">
+<!--
+.style1 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<script>
+function ld_equip()
+{
+var doc=nb_equip.XMLDocument;
+doc.load("equip.xml");
+document.getElementById("head_id").innerHTML="Equipment Details "; 
+ 
+}
+
+function ld_eng()
+{
+var doc_s=ds_staff.XMLDocument;
+doc_s.load("details.xml");
+document.getElementById("head_id_d").innerHTML="Staff Details "; 
+
+}
+
+
+</script>
+
+<XML id="nb_details" src="details.xml"></XML>
+
+<object id="nb_equip" CLASSID="clsid:550dda30-0541-11d2-9ca9-0060b0ec3d39" 
+width="0" height="0"></object>
+
+
+<object id="ds_staff" CLASSID="clsid:550dda30-0541-11d2-9ca9-0060b0ec3d39" 
+width="0" height="0"></object>
+
+
+<body>
+<table width="80%" border="1" align="center" cellspacing="2" >
+
+
+  <tr bgcolor="#FF6699">
+    <td colspan="2">
+				<table width="80%"  datasrc="#nb_details" border="1" align="center" bordercolor="#FFFFFF">
+				  <caption>
+					<span class="style1">Engineer Details        </span>
+				  </caption>
+					<thead>
+				  <tr>
+					<th>name </span></th>
+					<th>city </span></th>
+					<th>state </span></th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td><span datafld="name"> </span></td>
+					<td><span datafld="city"> </span></td>
+					<td><span datafld="state"> </span></td>
+				  </tr>
+				  </tbody>
+				</table>
+				
+	</td>
+  </tr>
+
+
+
+  <tr bgcolor="#669999">
+    <td height="35" colspan="2">
+			<table width="80%"  border="1" align="center" bordercolor="#FFFFFF" id=nbbeq datasrc="#nb_equip" >
+			  <caption>
+				<span class="style1" id="head_id">       </span>
+			  </caption>
+			   <tr>
+				<td><span datafld="name"> </span></td>
+				<td><span datafld="rate"> </span></td>
+				<td><span datafld="manufacturer"> </span></td>
+			  </tr>
+	  </table>
+	</td>
+  </tr>
+  
+  
+  
+  <tr bgcolor="#669999">
+    <td height="35" colspan="2">
+		  <table width="80%"  border="1" align="center" bordercolor="#FFFFFF" id="nb_staff" datasrc="#ds_staff" >
+			  <caption>
+				<span class="style1" id="head_id_d">        </span>
+			  </caption>
+			
+			  <tr>
+				<td><span datafld="name"> </span></td>
+				<td><span datafld="city"> </span></td>
+				<td><span datafld="state"> </span></td>
+			  </tr>
+		    
+	  </table>
+	</td>
+</tr>
+
+  
+  <tr>
+    <td><label>
+      <div align="center">
+        <input type="button" name="Button" value="Staff Details" onclick="ld_eng();" />
+      </div>
+    </label></td>
+    <td><div align="center">
+      <input type="button" name="Button2" value="Equipment Details" onclick="ld_equip()"/>
+    </div></td>
+  </tr>
+</table>
+</body>
+</html>

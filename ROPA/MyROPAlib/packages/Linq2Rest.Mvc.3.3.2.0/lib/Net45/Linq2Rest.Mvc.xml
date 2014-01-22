@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Linq2Rest.Mvc</name>
+  </assembly>
+  <members>
+    <member name="T:Linq2Rest.Mvc.ModelFilterBinder`1">
+      <summary>
+            Defines the default model binder to bind an <see cref="T:Linq2Rest.IModelFilter`1" />.
+            </summary>
+      <typeparam name="T" />
+      <invariant>_parser != null</invariant>
+    </member>
+    <member name="M:Linq2Rest.Mvc.ModelFilterBinder`1.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:Linq2Rest.Mvc.ModelFilterBinder`1" /> class.
+            </summary>
+    </member>
+    <member name="M:Linq2Rest.Mvc.ModelFilterBinder`1.#ctor(Linq2Rest.Parser.IParameterParser{`0})">
+      <summary>
+            Initializes a new instance of the <see cref="T:Linq2Rest.Mvc.ModelFilterBinder`1" /> class.
+            </summary>
+      <param name="parser">The <see cref="T:Linq2Rest.Parser.IParameterParser`1" /> to use.</param>
+    </member>
+    <member name="M:Linq2Rest.Mvc.ModelFilterBinder`1.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+      <summary>
+            Binds the model to a value by using the specified controller context and binding context.
+            </summary>
+      <returns>
+            The bound value.
+            </returns>
+      <param name="controllerContext">The controller context.</param>
+      <param name="bindingContext">The binding context.</param>
+    </member>
+    <member name="T:Linq2Rest.Mvc.Provider.RuntimeAnonymousTypeSerializer`1">
+      <summary>
+            Serializes simples annymous type structures.
+            </summary>
+      <typeparam name="T">The <see cref="T:System.Type" /> to serialize.</typeparam>
+      <invariant>_innerSerializer != null</invariant>
+      <invariant>_elementType != null</invariant>
+    </member>
+    <member name="M:Linq2Rest.Mvc.Provider.RuntimeAnonymousTypeSerializer`1.Deserialize(System.IO.Stream)">
+      <summary>
+            Deserializes a single item.
+            </summary>
+      <param name="input">The serialized item.</param>
+      <returns>An instance of the serialized item.</returns>
+      <requires inheritedFrom="M:Linq2Rest.Provider.ISerializer`1.Deserialize(System.IO.Stream)" inheritedFromTypeName="ISerializer" exception="T:System.ArgumentNullException" csharp="input != null" vb="input &lt;&gt; Nothing">input != null</requires>
+      <exception cref="T:System.ArgumentNullException">input == null</exception>
+    </member>
+    <member name="M:Linq2Rest.Mvc.Provider.RuntimeAnonymousTypeSerializer`1.DeserializeList(System.IO.Stream)">
+      <summary>
+            Deserializes a list of items.
+            </summary>
+      <param name="input">The serialized items.</param>
+      <returns>An list of the serialized items.</returns>
+      <requires inheritedFrom="M:Linq2Rest.Provider.ISerializer`1.DeserializeList(System.IO.Stream)" inheritedFromTypeName="ISerializer" exception="T:System.ArgumentNullException" csharp="input != null" vb="input &lt;&gt; Nothing">input != null</requires>
+      <exception cref="T:System.ArgumentNullException">input == null</exception>
+    </member>
+    <member name="M:Linq2Rest.Mvc.Provider.RuntimeAnonymousTypeSerializer`1.Serialize(`0)">
+      <summary>
+            Serializes the passed item into a <see cref="T:System.IO.Stream" />.
+            </summary>
+      <param name="item">The item to serialize.</param>
+      <returns>A <see cref="T:System.IO.Stream" /> representation of the item.</returns>
+      <requires inheritedFrom="M:Linq2Rest.Provider.ISerializer`1.Serialize(`0)" inheritedFromTypeName="ISerializer" exception="T:System.ArgumentNullException" csharp="!ReferenceEquals((object)item, null)" vb="Not ReferenceEquals(((Object)item), Nothing)">!object.ReferenceEquals((object)item, null)</requires>
+      <exception cref="T:System.ArgumentNullException">object.ReferenceEquals((object)item, null)</exception>
+    </member>
+  </members>
+</doc>

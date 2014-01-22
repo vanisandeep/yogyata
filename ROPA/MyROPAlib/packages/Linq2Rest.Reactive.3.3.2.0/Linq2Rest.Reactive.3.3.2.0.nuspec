@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Linq2Rest.Reactive</id>
+    <version>3.3.2.0</version>
+    <title>Reactive Extensions for Linq2Rest</title>
+    <authors>Jacob Reimers</authors>
+    <owners>Jacob Reimers</owners>
+    <licenseUrl>http://www.opensource.org/licenses/MS-PL</licenseUrl>
+    <projectUrl>https://bitbucket.org/jjrdk/linq2rest</projectUrl>
+    <iconUrl>https://bitbucket-assetroot.s3.amazonaws.com/c/photos/2013/Sep/07/linq2rest-logo-4047795347-2_avatar.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Generates OData style Rx Observables from LINQ queries against a REST service.</description>
+    <releaseNotes>Added support for observing GET, POST, PUT and DELETE operations. Added support for WP8. Updated to use Rx v. 2.1.30214.0.</releaseNotes>
+    <copyright>Jacob Reimers (Reimers.dk)</copyright>
+    <language />
+    <tags>OData LINQ REST Rx Reactive SL5 WP8 WinRT</tags>
+    <dependencies>
+      <group>
+        <dependency id="Rx-Providers" version="2.1.30214.0" />
+        <dependency id="Linq2Rest" version="3.3.2.0" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="Rx-Providers" version="2.1.30214.0" />
+        <dependency id="Linq2Rest" version="3.3.2.0" />
+      </group>
+      <group targetFramework="Silverlight5.0">
+        <dependency id="Rx-Providers" version="2.1.30214.0" />
+        <dependency id="System.Threading.Tasks" version="3.0.1" />
+      </group>
+      <group targetFramework="WindowsPhone8.0">
+        <dependency id="Rx-Providers" version="2.1.30214.0" />
+      </group>
+      <group targetFramework="Windows0.0">
+        <dependency id="Rx-Providers" version="2.1.30214.0" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="" />
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.5" />
+    </frameworkAssemblies>
+    <references>
+      <reference file="Linq2Rest.Reactive.dll" />
+      <reference file="Linq2Rest.Reactive.xml" />
+    </references>
+  </metadata>
+</package>

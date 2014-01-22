@@ -1,0 +1,180 @@
+﻿System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity)
+   at ROPA_RegistrationForm.DeleteObject() in d:\MyPratice\Yogyata\ROPA\RegistrationForm.aspx.cs:line 106System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity)
+   at ROPA_RegistrationForm.DeleteObject() in d:\MyPratice\Yogyata\ROPA\RegistrationForm.aspx.cs:line 104System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 45System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 45System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 42System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 46System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 46System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 48System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 48System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 48System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 48System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 49System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 49System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.InvalidOperationException: The object cannot be deleted because it was not found in the ObjectStateManager.
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 48System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 48System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 50System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 58System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 58System.Threading.ThreadAbortException: Thread was being aborted.
+   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 67System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity)
+   at ROPAUtil.Deleteuser(String FirstName) in d:\MyPratice\Yogyata\App_Code\ROPAUtil.cs:line 31
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 44System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity)
+   at ROPAUtil.Deleteuser(String FirstName) in d:\MyPratice\Yogyata\App_Code\ROPAUtil.cs:line 31
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 44System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity)
+   at ROPAUtil.Deleteuser(String FirstName) in d:\MyPratice\Yogyata\App_Code\ROPAUtil.cs:line 31
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 44System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Objects.ObjectContext.DeleteObject(Object entity)
+   at ROPAUtil.Deleteuser(String FirstName) in d:\MyPratice\Yogyata\App_Code\ROPAUtil.cs:line 31
+   at ROPA_DeleteRecord.DeleteObject() in d:\MyPratice\Yogyata\ROPA\DeleteRecord.aspx.cs:line 44

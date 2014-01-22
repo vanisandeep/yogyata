@@ -1,0 +1,149 @@
+﻿USE ROPA
+GO
+
+CREATE TABLE UpcmomingSurveyor
+(
+SurApp_Id int ,
+FirstName VARCHAR(25),
+LastName  VARCHAR(25),
+ApplyAsRole  int CONSTRAINT fk_UpcomingRoles_pid FOREIGN KEY REFERENCES UpcomingRole(RoleId)
+);
+
+GO
+
+insert into  UpcmomingSurveyor values('Sandeep', 'Miriyala','7')
+insert into UpcmomingSurveyor values('Sripada','Srivallabha','6')
+
+
+select * from  UpcmomingSurveyor
+
+CREATE TABLE UpcomingRole
+(
+
+RoleId INT CONSTRAINT pk_UpcomingRole_rid PRIMARY KEY, RoleName VARCHAR(25)
+);
+
+
+
+select * from UpcomingRole
+
+
+insert into UpcomingRole values ('Admin')
+insert into UpcomingRole values('MdSur')
+
+insert into UpcomingRole values ('PhysSur')
+insert into UpcomingRole values('CommitterReveiewer')
+
+ 
+insert into UpcomingRole values('Committe Chair')
+
+insert into UpcomingRole values ('Trainee MD')
+insert into UpcomingRole values('Trainee Phy') 
+
+
+
+
+
+
+
+
+
+
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP 1000 [SurApp_Id]
+      ,[FirstName]
+      ,[LastName]
+      ,[ApplyAsRole]
+      ,[Password]
+  FROM [ROPA].[dbo].[UpcmomingSurveyor]
+
+ ALTER TABLE [ROPA].[dbo].[UpcmomingSurveyor]
+ADD AppId INT CONSTRAINT fk_UpcomingAppstauts_Appid FOREIGN KEY REFERENCES UpcomingAppstatus(AppId)
+ 
+ 
+ 
+ CREATE TABLE UpcomingAppstatus
+(   AppId INT CONSTRAINT pk_UpcomingAppstauts_Appid PRIMARY KEY, AppStatus VARCHAR(25)
+);
+
+ 
+ 
+ 
+ 
+select * from dbo.UpcomingAppstatus
+
+
+
+insert into  dbo.UpcomingAppstatus values('Application Submited');
+
+insert into dbo.UpcomingAppstatus values('Application Accepted');
+
+insert into  dbo.UpcomingAppstatus values('Application Resubmitted');
+
+insert into dbo.UpcomingAppstatus values('Reviewers Assigned');
+
+insert into dbo.UpcomingAppstatus values('Rev-1 Submitted');
+
+insert into dbo.UpcomingAppstatus values('Rev-2 Report  Submitted');
+
+insert into  dbo.UpcomingAppstatus values(' Rev subm Reported');
+insert into dbo.UpcomingAppstatus values ('User Created');
+insert into dbo.UpcomingAppstatus values ('Assign Chair');
+
+insert into dbo.UpcomingAppstatus values ('User Created');
+
+insert into dbo.UpcomingAppstatus values ('Application Rejceted');
+
+
+
+
+
+
+  
+create TABLE FeedBackForm(
+ FeedBackId  int  NOT NULL,
+ FirstName varchar(max) Not NULL,
+ EmailId varchar(max) NOT NULL,
+ PhoneNumber varchar(max) NOT NULL,
+ Addres varchar(max) NOT NULL,Commments varchar(max) NOT NULL,
+  insertDate datetime  NOT NULL,
+  countrycode varchar(30)  NOT NULL CONSTRAINT fk_Country_countrycode FOREIGN KEY REFERENCES Country(countrycode)
+  )   
+  
+  select * from FeedBackForm 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ CREATE TABLE Country
+(  CountryId int,
+   countrycode varchar CONSTRAINT pk_Country_countrycode PRIMARY KEY, CountryName VARCHAR(25)
+);
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE UploadFiles
+(
+
+UPloadId INT CONSTRAINT pk_UploadFiles_fid PRIMARY KEY, 
+
+SurApp_Id  int CONSTRAINT fk_UpcmomingSurveyor FOREIGN KEY REFERENCES UpcmomingSurveyor(SurApp_Id)
+
+);
+
+
+alter table UploadFiles   ADD GUID varchar(max)
+ 
+ alter table  UploadFiles ADD FIleFor varchar(max)
+ 

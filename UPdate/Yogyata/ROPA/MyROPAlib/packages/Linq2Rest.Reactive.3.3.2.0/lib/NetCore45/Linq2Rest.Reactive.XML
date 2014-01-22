@@ -1,0 +1,362 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Linq2Rest.Reactive</name>
+    </assembly>
+    <members>
+        <member name="T:Linq2Rest.Reactive.AsyncExpressionProcessor">
+            <summary>
+            The default async expression processor implementation.
+            </summary>
+        </member>
+        <member name="T:Linq2Rest.Reactive.IAsyncExpressionProcessor">
+            <summary>
+            Defines the inteface for an expression processor.
+            </summary>
+        </member>
+        <member name="M:Linq2Rest.Reactive.IAsyncExpressionProcessor.ProcessMethodCall``1(System.Linq.Expressions.MethodCallExpression,Linq2Rest.Provider.ParameterBuilder,System.Func{Linq2Rest.Provider.ParameterBuilder,System.IObservable{System.Collections.Generic.IEnumerable{``0}}},System.Func{System.Type,Linq2Rest.Provider.ParameterBuilder,System.IObservable{System.Collections.IEnumerable}})">
+            <summary>
+            Processes the passed <see cref="T:System.Linq.Expressions.MethodCallExpression"/> and returns the result as an observable.
+            </summary>
+            <typeparam name="T">The generic <see cref="T:System.Type"/> of object returned in the <see cref="T:System.IObservable`1"/>.</typeparam>
+            <param name="methodCall">The <see cref="T:System.Linq.Expressions.MethodCallExpression"/> to process.</param>
+            <param name="builder">The <see cref="T:Linq2Rest.Provider.ParameterBuilder"/> used to store values.</param>
+            <param name="resultLoader">The result loader function.</param>
+            <param name="intermediateResultLoader">The intermediate result loader function.</param>
+            <returns>An <see cref="T:System.IObservable`1"/> sequence with the result of the method call.</returns>
+        </member>
+        <member name="T:Linq2Rest.Reactive.IAsyncRestClient">
+            <summary>
+            Defines the public interface for an async REST client.
+            </summary>
+        </member>
+        <member name="M:Linq2Rest.Reactive.IAsyncRestClient.Download">
+            <summary>
+            Gets a service response.
+            </summary>
+            <returns>The service response as a <see cref="T:System.Threading.Tasks.Task`1"/>.</returns>
+        </member>
+        <member name="T:Linq2Rest.Reactive.HttpMethod">
+            <summary>
+            Defines the public enumeration of supported HTTP methods.
+            </summary>
+        </member>
+        <member name="F:Linq2Rest.Reactive.HttpMethod.Get">
+            <summary>
+            Represents the GET HTTP method.
+            </summary>
+        </member>
+        <member name="F:Linq2Rest.Reactive.HttpMethod.Put">
+            <summary>
+            Represents the PUT HTTP method.
+            </summary>
+        </member>
+        <member name="F:Linq2Rest.Reactive.HttpMethod.Post">
+            <summary>
+            Represents the POST HTTP method.
+            </summary>
+        </member>
+        <member name="F:Linq2Rest.Reactive.HttpMethod.Delete">
+            <summary>
+            Represents the DELETE HTTP method.
+            </summary>
+        </member>
+        <member name="T:Linq2Rest.Reactive.IAsyncRestClientFactory">
+            <summary>
+            Defines the public interface for the async REST client factory.
+            </summary>
+        </member>
+        <member name="M:Linq2Rest.Reactive.IAsyncRestClientFactory.Create(System.Uri)">
+            <summary>
+            Creates an <see cref="T:Linq2Rest.Reactive.IAsyncRestClient"/>.
+            </summary>
+            <param name="source">The <see cref="T:System.Uri"/> to download from.</param>
+            <returns>An <see cref="T:Linq2Rest.Reactive.IAsyncRestClient"/> instance.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.IAsyncRestClientFactory.SetMethod(Linq2Rest.Reactive.HttpMethod)">
+            <summary>
+            Sets the HTTP method for the request.
+            </summary>
+            <param name="method">The <see cref="T:Linq2Rest.Reactive.HttpMethod"/> to set.</param>
+        </member>
+        <member name="M:Linq2Rest.Reactive.IAsyncRestClientFactory.SetInput(System.IO.Stream)">
+            <summary>
+            Sets the input data to send to the server.
+            </summary>
+            <param name="input">The input as a <see cref="T:System.IO.Stream"/>.</param>
+        </member>
+        <member name="P:Linq2Rest.Reactive.IAsyncRestClientFactory.ServiceBase">
+            <summary>
+            Gets the base service address.
+            </summary>
+        </member>
+        <member name="T:Linq2Rest.Reactive.Implementations.AsyncJsonRestClientFactory">
+            <summary>
+            Defines the factory to create a REST client using JSON requests.
+            </summary>
+        </member>
+        <member name="M:Linq2Rest.Reactive.Implementations.AsyncJsonRestClientFactory.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Linq2Rest.Reactive.Implementations.AsyncJsonRestClientFactory"/> class.
+            </summary>
+            <param name="serviceBase">The base <see cref="T:System.Uri"/> for the REST service.</param>
+        </member>
+        <member name="M:Linq2Rest.Reactive.Implementations.AsyncJsonRestClientFactory.Create(System.Uri)">
+            <summary>
+            Creates an <see cref="T:Linq2Rest.Reactive.IAsyncRestClient"/>.
+            </summary>
+            <param name="source">The <see cref="T:System.Uri"/> to download from.</param>
+            <returns>An <see cref="T:Linq2Rest.Reactive.IAsyncRestClient"/> instance.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.Implementations.AsyncJsonRestClientFactory.SetMethod(Linq2Rest.Reactive.HttpMethod)">
+            <summary>
+            Sets the HTTP method for the request.
+            </summary>
+            <param name="method">The <see cref="T:Linq2Rest.Reactive.HttpMethod"/> to set.</param>
+        </member>
+        <member name="M:Linq2Rest.Reactive.Implementations.AsyncJsonRestClientFactory.SetInput(System.IO.Stream)">
+            <summary>
+            Sets the input data to send to the server.
+            </summary>
+            <param name="input">The input as a <see cref="T:System.IO.Stream"/>.</param>
+        </member>
+        <member name="P:Linq2Rest.Reactive.Implementations.AsyncJsonRestClientFactory.ServiceBase">
+            <summary>
+            Gets the base service address.
+            </summary>
+        </member>
+        <member name="T:Linq2Rest.Reactive.Implementations.AsyncXmlRestClientFactory">
+            <summary>
+            Defines the factory to create a REST client using XML requests.
+            </summary>
+        </member>
+        <member name="M:Linq2Rest.Reactive.Implementations.AsyncXmlRestClientFactory.#ctor(System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Linq2Rest.Reactive.Implementations.AsyncXmlRestClientFactory"/> class.
+            </summary>
+            <param name="serviceBase">The base <see cref="T:System.Uri"/> for the REST service.</param>
+        </member>
+        <member name="M:Linq2Rest.Reactive.Implementations.AsyncXmlRestClientFactory.Create(System.Uri)">
+            <summary>
+            Creates an <see cref="T:Linq2Rest.Reactive.IAsyncRestClient"/>.
+            </summary>
+            <param name="source">The <see cref="T:System.Uri"/> to download from.</param>
+            <returns>An <see cref="T:Linq2Rest.Reactive.IAsyncRestClient"/> instance.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.Implementations.AsyncXmlRestClientFactory.SetMethod(Linq2Rest.Reactive.HttpMethod)">
+            <summary>
+            Sets the HTTP method for the request.
+            </summary>
+            <param name="method">The <see cref="T:Linq2Rest.Reactive.HttpMethod"/> to set.</param>
+        </member>
+        <member name="M:Linq2Rest.Reactive.Implementations.AsyncXmlRestClientFactory.SetInput(System.IO.Stream)">
+            <summary>
+            Sets the input data to send to the server.
+            </summary>
+            <param name="input">The input as a <see cref="T:System.IO.Stream"/>.</param>
+        </member>
+        <member name="P:Linq2Rest.Reactive.Implementations.AsyncXmlRestClientFactory.ServiceBase">
+            <summary>
+            Gets the base service address.
+            </summary>
+        </member>
+        <member name="T:Linq2Rest.Reactive.InnerRestObservable`1">
+            <summary>
+            Defines an observable REST query.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> of object returned by the REST service.</typeparam>
+        </member>
+        <member name="M:Linq2Rest.Reactive.InnerRestObservableBase`1.Subscribe(System.IObserver{`0})">
+            <summary>
+            Notifies the provider that an observer is to receive notifications.
+            </summary>
+            <returns>
+            A reference to an interface that allows observers to stop receiving notifications before the provider has finished sending them.
+            </returns>
+            <param name="observer">The object that is to receive notifications.</param>
+        </member>
+        <member name="P:Linq2Rest.Reactive.InnerRestObservableBase`1.ElementType">
+            <summary>
+            Gets the type of the element(s) that are returned when the expression tree associated with this instance of IQbservable is executed.
+            </summary>
+        </member>
+        <member name="P:Linq2Rest.Reactive.InnerRestObservableBase`1.Expression">
+            <summary>
+            Gets the expression tree that is associated with the instance of IQbservable.
+            </summary>
+        </member>
+        <member name="P:Linq2Rest.Reactive.InnerRestObservableBase`1.Provider">
+            <summary>
+            Gets the query provider that is associated with this data source.
+            </summary>
+        </member>
+        <member name="P:Linq2Rest.Reactive.InnerRestObservable`1.Provider">
+            <summary>
+            Gets the query provider that is associated with this data source.
+            </summary>
+        </member>
+        <member name="T:Linq2Rest.Reactive.ObservableExtensions">
+            <summary>
+            Defines public extension methods on <see cref="T:System.IObservable`1"/>
+            </summary>
+        </member>
+        <member name="M:Linq2Rest.Reactive.ObservableExtensions.Post``2(System.IObservable{``0},System.Func{``1})">
+            <summary>
+            Creates an <see cref="T:System.IObservable`1"/> over a POST request.
+            </summary>
+            <param name="source">The source <see cref="T:System.IObservable`1"/>.</param>
+            <param name="input">A <see cref="T:System.Func`1"/> to generate POST data.</param>
+            <typeparam name="T">The <see cref="T:System.Type"/> of item in the <see cref="T:System.IObservable`1"/>.</typeparam>
+            <typeparam name="TInput">The <see cref="T:System.Type"/> of item to POST to the server.</typeparam>
+            <returns>An <see cref="T:System.IObservable`1"/> instance.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.ObservableExtensions.Put``2(System.IObservable{``0},System.Func{``1})">
+            <summary>
+            Creates an <see cref="T:System.IObservable`1"/> over a PUT request.
+            </summary>
+            <param name="source">The source <see cref="T:System.IObservable`1"/>.</param>
+            <param name="input">A <see cref="T:System.Func`1"/> to generate PUT data.</param>
+            <typeparam name="T">The <see cref="T:System.Type"/> of item in the <see cref="T:System.IObservable`1"/>.</typeparam>
+            <typeparam name="TInput">The <see cref="T:System.Type"/> of item to PUT on the server.</typeparam>
+            <returns>An <see cref="T:System.IObservable`1"/> instance.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.ObservableExtensions.Delete``1(System.IObservable{``0})">
+            <summary>
+            Creates an <see cref="T:System.IObservable`1"/> over a DELETE request.
+            </summary>
+            <param name="source">The source <see cref="T:System.IObservable`1"/>.</param>
+            <typeparam name="T">The <see cref="T:System.Type"/> of item in the <see cref="T:System.IObservable`1"/>.</typeparam>
+            <returns>An <see cref="T:System.IObservable`1"/> instance.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.ObservableExtensions.Expand``1(System.IObservable{``0},System.String)">
+            <summary>
+            Expands the specified source.
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="source">The source.</param>
+            <param name="paths">The paths to expand in the format "Child1, Child2/GrandChild2".</param>
+            <returns>An <see cref="T:System.IObservable`1"/> for continued querying.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.ObservableExtensions.Expand``1(System.IObservable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Object}}[])">
+            <summary>
+            Expands the specified source.
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="source">The source.</param>
+            <param name="properties">The paths to expand.</param>
+            <returns>An <see cref="T:System.IObservable`1"/> for continued querying.</returns>
+        </member>
+        <member name="T:Linq2Rest.Reactive.RestObservable`1">
+            <summary>
+            Defines an observable REST query.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type"/> of object returned by the REST service.</typeparam>
+        </member>
+        <member name="M:Linq2Rest.Reactive.RestObservable`1.#ctor(Linq2Rest.Reactive.IAsyncRestClientFactory,Linq2Rest.Provider.ISerializerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Linq2Rest.Reactive.RestObservable`1"/> class.
+            </summary>
+            <param name="restClientFactory">An <see cref="T:Linq2Rest.Reactive.IAsyncRestClientFactory"/> to perform requests.</param>
+            <param name="serializerFactory">An <see cref="T:Linq2Rest.Provider.ISerializerFactory"/> to perform deserialization.</param>
+        </member>
+        <member name="M:Linq2Rest.Reactive.RestObservable`1.Create">
+            <summary>
+            Creates an observable performing a single call to the defined service.
+            </summary>
+            <returns>An instance of an <see cref="T:System.Reactive.Linq.IQbservable`1"/>.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.RestObservable`1.Poll(System.IObservable{System.Reactive.Unit})">
+            <summary>
+            Creates an observable performing calls when triggered.
+            </summary>
+            <param name="trigger">The trigger.</param>
+            <returns>An instance of an <see cref="T:System.Reactive.Linq.IQbservable`1"/>.</returns>
+        </member>
+        <member name="M:Linq2Rest.Reactive.TriggeredRestObservable`1.Subscribe(System.IObserver{`0})">
+            <summary>
+            Notifies the provider that an observer is to receive notifications.
+            </summary>
+            <returns>
+            A reference to an interface that allows observers to stop receiving notifications before the provider has finished sending them.
+            </returns>
+            <param name="observer">The object that is to receive notifications.</param>
+        </member>
+        <member name="P:Linq2Rest.Reactive.TriggeredRestObservable`1.Provider">
+            <summary>
+            Gets the query provider that is associated with this data source.
+            </summary>
+        </member>
+        <member name="T:Linq2Rest.Provider.IExpressionWriter">
+            <summary>
+            Defines the public interface for an expression visitor.
+            </summary>
+        </member>
+        <member name="M:Linq2Rest.Provider.IExpressionWriter.Write(System.Linq.Expressions.Expression)">
+            <summary>
+            Generates a string representation of the passed expression.
+            </summary>
+            <param name="expression">The <see cref="T:System.Linq.Expressions.Expression"/> to visit.</param>
+            <returns>A string value.</returns>
+        </member>
+        <member name="T:Linq2Rest.Provider.ISerializer`1">
+            <summary>
+            Defines the public interface for an object serializer.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Linq2Rest.Provider.ISerializer`1.Deserialize(System.IO.Stream)">
+            <summary>
+            Deserializes a single item.
+            </summary>
+            <param name="input">The serialized item.</param>
+            <returns>An instance of the serialized item.</returns>
+        </member>
+        <member name="M:Linq2Rest.Provider.ISerializer`1.DeserializeList(System.IO.Stream)">
+            <summary>
+            Deserializes a list of items.
+            </summary>
+            <param name="input">The serialized items.</param>
+            <returns>An list of the serialized items.</returns>
+        </member>
+        <member name="M:Linq2Rest.Provider.ISerializer`1.Serialize(`0)">
+            <summary>
+            Serializes the passed item into a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="item">The item to serialize.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> representation of the item.</returns>
+        </member>
+        <member name="M:Linq2Rest.Provider.SerializerContracts`1.Deserialize(System.IO.Stream)">
+            <summary>
+            Deserializes a single item.
+            </summary>
+            <param name="input">The serialized item.</param>
+            <returns>An instance of the serialized item.</returns>
+        </member>
+        <member name="M:Linq2Rest.Provider.SerializerContracts`1.DeserializeList(System.IO.Stream)">
+            <summary>
+            Deserializes a list of items.
+            </summary>
+            <param name="input">The serialized items.</param>
+            <returns>An list of the serialized items.</returns>
+        </member>
+        <member name="M:Linq2Rest.Provider.SerializerContracts`1.Serialize(`0)">
+            <summary>
+            Serializes the passed item into a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="item">The item to serialize.</param>
+            <returns>A <see cref="T:System.IO.Stream"/> representation of the item.</returns>
+        </member>
+        <member name="T:Linq2Rest.Provider.ISerializerFactory">
+            <summary>
+            Defines the public interface for a factory of <see cref="T:Linq2Rest.Provider.ISerializer`1"/>.
+            </summary>
+        </member>
+        <member name="M:Linq2Rest.Provider.ISerializerFactory.Create``1">
+            <summary>
+            Creates an instance of an <see cref="T:Linq2Rest.Provider.ISerializer`1"/>.
+            </summary>
+            <typeparam name="T">The item type for the serializer.</typeparam>
+            <returns>An instance of an <see cref="T:Linq2Rest.Provider.ISerializer`1"/>.</returns>
+        </member>
+    </members>
+</doc>

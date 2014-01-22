@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+    <title></title>
+      <script language="JavaScript">
+          var iCallID;
+          function InitializeService() {
+              alert('hi');
+              service.useService("http://localhost:49175/Yogyata/RopaWebservices.asmx?wsdl", "HelloWorld");
+              service.HelloWorldService.callService("HelloWorld");
+          }
+
+          function ShowResult() {
+              alert(event.result.value);
+          }
+        </script>
+</head>
+<body onload="InitializeService()"  id="service" style="behavior:url(../../webservice.htc)"  onresult="ShowResult()">
+
+</body>
+</html>

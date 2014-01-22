@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<man>
+	<details>
+		<name>new begin</name>
+		<city>Chennai</city>
+		<state>Tamilnadu</state>		
+	</details>
+
+	<details>
+		<name>Arun Victor</name>
+		<city>Chennai</city>
+		<state>Tamilnadu</state>		
+	</details>
+	<details>
+		<name>Elgine</name>
+		<city>Tuticorin</city>
+		<state>Tamilnadu</state>		
+	</details>
+	<details>
+		<name>Rajadurai</name>
+		<city>Tuticorin</city>
+		<state>Tamilnadu</state>		
+	</details>
+
+</man>

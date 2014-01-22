@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Home>
+    <Role id="1">
+        <Menu text="Item1" url="Item1.aspx">
+            <SubMenu text="Page-1-1" url="Page-1-1.aspx" />
+            <SubMenu text="Page-1-2" url="Page-1-2.aspx" />
+            <SubMenu text="page-1-3" url="Page-1-3.aspx" />
+        </Menu>
+        <Menu text="Item2"  url="Item2.aspx">
+            <SubMenu text="Page-2-1" url="Page-2-1.aspx">
+                <SubMenu text="Page-2-1-1" url="Page-2-1-1.aspx">
+                    <SubMenu text="Page-2-1-1-1" url="Page-2-1-1-1.aspx" />
+                    <SubMenu text="Page-2-1-1-2" url="Page-2-1-1-2.aspx" />
+                    <SubMenu text="Page-2-1-1-3" url="Page-2-1-1-3.aspx" />
+                </SubMenu>
+                <SubMenu text="Page-2-1-2" url="Page-2-1-2.aspx"></SubMenu>
+            </SubMenu>
+            <SubMenu text="Page-2-2" url="Page-2-2.aspx">
+                <SubMenu text="Page-2-2-1" url="ComedyPage-2-2-1.aspx">
+                    <SubMenu text="Page-2-2-1-1" url="Page-2-2-1-1.aspx" />
+                    <SubMenu text="Page-2-2-1-2" url="Page-2-2-1-2.aspx" />
+                    <SubMenu text="Page-2-2-1-3" url="Page-2-2-1-3.aspx" />
+                    <SubMenu text="Page-2-2-1-4" url="Page-2-2-1-4.aspx" />
+                </SubMenu>
+                <SubMenu text="Page-2-2-2" url="Page-2-2-2.aspx" />
+                <SubMenu text="Page-2-2-3" url="Page-2-2-3.aspx" />
+            </SubMenu>
+        </Menu>
+        <Menu text="Item3" url="Item3.aspx" />
+    </Role>
+    <Role id="2">
+        <Menu text="Item4" url="Item4.aspx">
+            <SubMenu text="Page-4-1" url="Page-4-1.aspx" />
+            <SubMenu text="Page-4-2" url="Page-4-2.aspx" />
+        </Menu>
+        <Menu text="Item5" url="Item5.aspx" />
+    </Role>
+</Home>

@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyROPAlib", "MyROPAlib\MyROPAlib.csproj", "{829CD526-4CA8-4DE6-9E34-B3D5BAB96578}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Yogyata", "..\..\", "{3C57BDE2-C0DE-459E-9908-79F28C666C4C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{829CD526-4CA8-4DE6-9E34-B3D5BAB96578}|MyROPAlib.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Yogyata"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\Yogyata\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Yogyata\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Yogyata"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\Yogyata\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Yogyata\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55398"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DBEA9C8E-CA16-4CD0-9189-ECA946A89822}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{829CD526-4CA8-4DE6-9E34-B3D5BAB96578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829CD526-4CA8-4DE6-9E34-B3D5BAB96578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829CD526-4CA8-4DE6-9E34-B3D5BAB96578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829CD526-4CA8-4DE6-9E34-B3D5BAB96578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C57BDE2-C0DE-459E-9908-79F28C666C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C57BDE2-C0DE-459E-9908-79F28C666C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C57BDE2-C0DE-459E-9908-79F28C666C4C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C57BDE2-C0DE-459E-9908-79F28C666C4C}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<equipment>
+	<details>
+		<name>Hard Disk</name>
+		<rate>2800</rate>
+		<manufacturer>SeaGate</manufacturer>		
+	</details>
+
+	<details>
+		<name>Motherboard</name>
+		<rate>10000</rate>
+		<manufacturer>Intel</manufacturer>		
+	</details>
+	<details>
+		<name>Monitor</name>
+		<rate>8000</rate>
+		<manufacturer>Samsung</manufacturer>		
+	</details>
+	<details>
+		<name>Rajadurai</name>
+		<rate>Tuticorin</rate>
+		<manufacturer>Tamilnad</manufacturer>		
+	</details>
+
+</equipment>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>format.js</id>
+    <version>1.0.7</version>
+    <title>Format.js</title>
+    <authors>K.Inanloo</authors>
+    <owners>K.Inanloo</owners>
+    <projectUrl>https://bitbucket.org/kamyar1979/format.js</projectUrl>
+    <iconUrl>https://bitbucket-assetroot.s3.amazonaws.com/c/photos/2012/Jun/02/format.js-logo-1917165042-6_avatar.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This is a port of all CLR/C# string formatting functions to javascript language.</description>
+    <summary>Javascript port of CLR string formatting</summary>
+    <releaseNotes>Add: Added Default Date Format to cultures.js</releaseNotes>
+    <copyright />
+    <language />
+  </metadata>
+</package>

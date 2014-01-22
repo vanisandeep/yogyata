@@ -1,0 +1,5 @@
+D:\MyPratice\Yogyata\ROPA\MyROPAlib\MyROPAlib\bin\Debug\MyROPAlib.dll
+D:\MyPratice\Yogyata\ROPA\MyROPAlib\MyROPAlib\bin\Debug\MyROPAlib.pdb
+D:\MyPratice\Yogyata\ROPA\MyROPAlib\MyROPAlib\obj\Debug\ResolveAssemblyReference.cache
+D:\MyPratice\Yogyata\ROPA\MyROPAlib\MyROPAlib\obj\Debug\MyROPAlib.dll
+D:\MyPratice\Yogyata\ROPA\MyROPAlib\MyROPAlib\obj\Debug\MyROPAlib.pdb

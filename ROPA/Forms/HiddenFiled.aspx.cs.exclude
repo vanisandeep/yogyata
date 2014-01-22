@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Text;
+using System.Security.Cryptography;
+using System.Configuration;
+
+public partial class ROPA_Forms_HiddenFiled : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+		if (!Page.IsPostBack)
+		{
+
+			Encrypt_Decrypt.Enc_Dec enc = new Encrypt_Decrypt.Enc_Dec();
+
+			hdnField1.value = enc.Encrypt(hdnField1.value);
+
+			Response.Write("Page loaded for first time <br/>");
+			Response.Write("Hidden field does not have a value now: " + HidFld.Value.ToString());
+			Response.Write("<br/>Enter some text and press the Encrypt button");
+		}
+    }
+
+
+	protected void btn1_Click(object sender, EventArgs e)
+	{
+		byte[] KeyArray;
+		byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(txtBox.Text);
+
+		System.Configuration.AppSettingsReader settingReader = new System.Configuration.AppSettingsReader();
+
+		string key = (string)settingReader.GetValue("SecurityKey", typeof(String));
+
+		MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
+		KeyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+		hashmd5.Clear();
+
+		TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
+		tdes.Key = KeyArray;
+		tdes.Mode = CipherMode.ECB;
+		tdes.Padding = PaddingMode.PKCS7;
+
+		ICryptoTransform cTransform = tdes.CreateEncryptor();
+		byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+		tdes.Clear();
+		HidFld.Value = Convert.ToBase64String(resultArray, 0, resultArray.Length);
+		Response.Write("<br/>Encrypted Text: <b>" + HidFld.Value + "</b>");
+		Response.Write("<br/>Now you can decrypt the text by clicking the decrypt button");
+	}
+
+	protected void btn2_Click(object sender, EventArgs e)
+	{
+
+		Response.Write("<br/>Encrypted Text: <b>" + HidFld.Value + "</b>");
+		byte[] keyArray;
+		byte[] toEncryptArray = Convert.FromBase64String(HidFld.Value);
+
+		System.Configuration.AppSettingsReader settingsReader = new AppSettingsReader();
+		string key = (string)settingsReader.GetValue("SecurityKey", typeof(String));
+
+		MD5CryptoServiceProvider hashmd5 = new MD5CryptoServiceProvider();
+		keyArray = hashmd5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+		hashmd5.Clear();
+
+		TripleDESCryptoServiceProvider tdes = new TripleDESCryptoServiceProvider();
+		tdes.Key = keyArray;
+		tdes.Mode = CipherMode.ECB;
+		tdes.Padding = PaddingMode.PKCS7;
+
+		ICryptoTransform cTransform = tdes.CreateDecryptor();
+		byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+
+		tdes.Clear();
+		Response.Write("<br/>Dcrypted Text: <b>" + UTF8Encoding.UTF8.GetString(resultArray) + "</b>");
+	}
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>OpaqueMail</id>
+    <version>1.6.0.0</version>
+    <title>OpaqueMail</title>
+    <authors>Bert Johnson</authors>
+    <owners>Bert Johnson</owners>
+    <licenseUrl>https://github.com/bertjohnson/OpaqueMail/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/bertjohnson/opaquemail</projectUrl>
+    <iconUrl>http://opaquemail.org/images/opaquemail.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>.NET e-mail library with full support for IMAP, POP3, and SMTP. Provides S/MIME message signing, encryption, and decryption to foster better e-mail security and privacy.
+
+Follows IETF standards, implementing all IMAP4rev1, POP3, SMTP, and S/MIME 3.2 commands plus common extensions such as IDLE. Supports MIME, Unicode, and TNEF encoding.
+
+Includes a fully-featured test client that allows browsing and searching of IMAP and POP3 messages as well as sending of SMTP messages with encryption. Automatically embeds images into Text/HTML messages and strips Script tags.
+
+Inherits from System.Net.Mail.MailMessage and System.Net.Mail.SmtpClient for simplified upgrades of existing code. Implements .NET 4.5 async and await.
+
+Thoroughly documented. Designed for security, portability, and performance.
+
+Supporting documentation and tutorials available at (http://opaquemail.org/library/).
+
+Licensed according to the MIT License (http://mit-license.org/).
+
+Created by Bert Johnson (http://bertjohnson.net) of Bkip Inc. (http://bkip.com).</description>
+    <summary>.NET e-mail library with full support for IMAP, POP3, and SMTP. Provides S/MIME message signing, encryption, and decryption to foster better e-mail security and privacy.</summary>
+    <releaseNotes>Version 1.6.0.0 significantly improves MIME parsing and international support.</releaseNotes>
+    <copyright>Copyright © 2013 Bert Johnson</copyright>
+    <language>en-US</language>
+    <tags>email smime smtp imap pop3 encryption security</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Data" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Data.DataSetExtensions" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Security" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
